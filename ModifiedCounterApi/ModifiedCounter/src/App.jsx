@@ -51,11 +51,12 @@ function App() {
 
   return (
     <>
-
+<center>
       <h1 className="text-3xl font-bold text-center p-10 ">
       Counter API
       </h1>
-
+<br />
+<br />
     <button className="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded" onClick={ontogglefnc}>
         Click to Toggle
         
@@ -67,33 +68,49 @@ function App() {
             <li>Soumili Ghosh</li>
           </ul>
     )}
-
+<br />
+<br />
     <input type="text" value={email} onChange={inputfnc} />
+    <br />
+
     <p>Email Id : {email}</p>
 
-
+    <br />
+<br />
     <p>Live Count is : {count}</p>
 
     <button  className="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded" onClick={addfnc}>Add Count</button>
-
+    <br />
+<br />
     <button  className="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded" onClick={subfnc}>Decrese Count</button>
+    <br />
+    <br />
 
-    <p>Live UserId is : {userid} </p>
-
+    <p>Fetching data from API 
+      <br />
+      <b>Live UserId is : </b>{userid} </p>
+    <br />
+<br />
     <button  className="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded" onClick={adduserid}>Add userId</button>
-
+    <br />
+<br />
     <button  className="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded" onClick={subuserid}>Decrese userId</button>
-
+    <br />
+<br />
     {
       data.map((user) => {
         return(
           <ul key={user.id}>
-          <li>{user.title}</li>
+            <li>User Id is : {user.id}</li>
+          <li>Title is : {user.title}</li>
+          <li>Body is : {user.body}</li>
         </ul>
         )
         
       })
     }
+
+</center>
     </>
   )
 }
